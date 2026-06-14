@@ -11,22 +11,34 @@ import java.util.Set;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
-@ToString
+@ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 public class Pedido extends Base implements Calculable {
 
+    @Builder.Default
     private Estado estado = Estado.PENDIENTE;
+    @Builder.Default
     @Setter(AccessLevel.NONE)
     private Double total = 0.0;
     private LocalDate fecha;
     private FormaPago formaPago;
     private final Set<DetallePedido> detalles = new HashSet<DetallePedido>();
 
-    public void addDetallePedido(int cantidad, Producto producto) {
+    public abstract static class PedidoBuilder<C extends Pedido, B extends PedidoBuilder<C, B>>
+            extends Base.BaseBuilder<C, B> {
 
+        public B total(Double ignored) {
+            return self();
+        }
+
+        public B estado(Estado ignored) {
+            return self();
+        }
+    }
+
+    public void addDetallePedido(int cantidad, Producto producto) {
         DetallePedido nuevoDetalle = DetallePedido.builder()
                 .cantidad(cantidad)
                 .producto(producto)
@@ -54,6 +66,7 @@ public class Pedido extends Base implements Calculable {
                 });
     }
 
+    @Override
     public void calcularTotal() {
         Double total = 0.0;
         for (DetallePedido detalle : detalles) {
