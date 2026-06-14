@@ -39,10 +39,7 @@ public class Pedido extends Base implements Calculable {
     }
 
     public void addDetallePedido(int cantidad, Producto producto) {
-        DetallePedido nuevoDetalle = DetallePedido.builder()
-                .cantidad(cantidad)
-                .producto(producto)
-                .build();
+        DetallePedido nuevoDetalle = new DetallePedido(cantidad, producto);
         if (this.detalles.add(nuevoDetalle)) {
             calcularTotal();
         } else {
