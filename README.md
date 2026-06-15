@@ -1,4 +1,4 @@
-# Trabajo Práctico 6: Lombok y DTO
+# Trabajo Práctico 7: Programación Funcional
 
 <img src="LogoUTN.png" width="60" align="left" />
 
@@ -7,14 +7,14 @@ Tecnicatura Universitaria en Programación<br>
 Programación III**
 
 Estudiante: Pedro Hidalgo - pedro.hidalgo@tupad.utn.edu.ar <br>
-Trabajo Práctico 6 de Programación III.
+Trabajo Práctico 7 de Programación III.
 
-Este proyecto consiste en una refactorización del sistema desarrollado en el Trabajo Práctico 5, implementando Gradle, Lombok y DTOs.
+Este proyecto consiste en una refactorización del sistema desarrollado en el Trabajo Práctico 6, implementando programación funcional.
 
 ---
 ## Links:
 
-Repositorio en GitHub: https://github.com/phidalg/TP-LOMBOK-DTO
+Repositorio en GitHub: https://github.com/phidalg/tp-programacion-funcional
 
 ## Identidad de las entidades:
 
