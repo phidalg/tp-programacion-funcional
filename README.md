@@ -16,6 +16,16 @@ Este proyecto consiste en una refactorización del sistema desarrollado en el Tr
 
 Repositorio en GitHub: https://github.com/phidalg/tp-programacion-funcional
 
+## Programación funcional:
+
+Se refactorizó el método calcularTotal() de la clase Pedido, utilizando stream() para obtener el valor del subtotal de cada elemento del conjunto (Set) de DetallePedido y calcular el total mediante su suma.
+
+Además, se implementó en el método main una rutina que procesa colecciones utilizando stream(), mostrando los resultados por consola.
+
+## Lombok:
+
+Este proyecto utiliza la librería Lombok para reducir el código repetitivo en las entidades mediante el uso de anotaciones, mejorando la legibilidad y mantenibilidad del código.
+
 ## Identidad de las entidades:
 
 Cada entidad define su identidad a través de equals() y hashCode() según el criterio que tiene sentido semántico en el dominio, no necesariamente por el ID  autogenerado.
